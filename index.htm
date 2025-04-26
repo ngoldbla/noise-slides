@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="viewport-fit=cover, width=device-width, height=device-height, initial-scale=1" />
+<link rel="stylesheet" href="engine/main.css">
+<link rel="stylesheet" href="theme/tokyo.css">
+<link rel="stylesheet" href="engine/katex/katex.min.css">
+<style>
+:root{
+--logo: /assets/1.png;
+--darkaccent1color: ;
+--lightaccent1color: ;
+--accent2: #43aa8b;
+--accent3: #f9c74f;
+--accent4: #90be6d;
+--accent5: #f8961e;
+--accent6: #577590;
+--lighttitletextcolor: #ffffff;
+--darktitletextcolor: #000000;
+--lightbodytextcolor: #ffffff;
+--darkbodytextcolor: #000000;
+--lightbackgroundcolor: transparent;
+--darkbackgroundcolor: transparent;
+--bodyfont: system-ui;
+--titlefont: system-ui;
+--lightframecolor: #FFFFFF;
+--darkframecolor: #000000;
+} 
+
+</style>
+</head>
+<body class="responsive">
+<div class="reveal">
+<div class="slides">
+<section class="variable-size-headings light v-split-container responsive present has-light-background fitted" data-background-color="#d3e9f8" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.859rem;">
+        <div style=""><h1 id="thesignalinthenoise">The Signal in the Noise</h1>
+
+<h2 id="aigamesandtheartofdenoising">AI, Games, and the Art of Denoising</h2>
+
+<p>Dylan Goldblatt, Ph.D.</p>
+
+<p>Kennesaw State University</p></div>
+        <figure style=""><img src="images/denoising.png" class=" size-contain position-center-center"></figure>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings light full-image-container responsive present has-light-background fitted" data-background-color="#d1e3f2" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-full-image media-grid" style="width: 100%; font-size: 1rem;">
+        <figure style=""><img src="images/machine_learning_2x.png" class=" size-contain position-center-center"></figure>
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings light default-container responsive present has-light-background fitted" data-background-color="#cfdeed" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-default" style="width: 100%; font-size: 1rem;">
+        <div style=""><h2 id="levels">Levels</h2>
+
+<ol>
+<li>Tutorial Island</li>
+<li>Asset Warp Pipe</li>
+<li>Narrative Instances</li>
+</ol></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings light v-split-container responsive present has-light-background fitted" data-background-color="#d9dceb" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.953rem;">
+        <div style=""><h4 class="kicker" id="1:tutorialisland">1: Tutorial Island</h4><h2 id="stochasticgradientdescent">Stochastic Gradient Descent</h2>
+
+<ol>
+<li>Measure slope</li>
+<li>Step downhill</li>
+<li>Measure again</li>
+<li>Repeat → converge</li>
+</ol></div>
+        <video data-autoplay="" controls="" class=" size-contain image-opacity-80 position-center-center" style="" data-paused-by-reveal=""><source src="images/Gradient Descent Presentation Clip.mp4"></video>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings light title-container responsive present has-light-background fitted" data-background-color="#e4dbea" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-title" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 class="kicker" id="1:tutorialisland">1: Tutorial Island</h4><h2 id="grandmastelevision">Grandma's Television</h2>
+
+<h4 id="grandmas-television.vercel.app"><a href="https://grandmas-television.vercel.app">grandmas-television.vercel.app</a></h4></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings light default-container responsive present fit-warning has-light-background fitted" data-background-color="#e6d3e0" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-default" style="width: 100%; font-size: 0.625rem;">
+        <div style=""><h4 class="kicker" id="1:tutorialisland">1: Tutorial Island</h4><h2 id="sourcesofcreativenoise">Sources of Creative Noise</h2>
+
+<table>
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+
+<thead>
+<tr>
+	<th>Source</th>
+	<th>Game Example</th>
+	<th>Benefit</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td>Gaussian</td>
+	<td>diffusion seed</td>
+	<td>from snow to owl</td>
+</tr>
+<tr>
+	<td>Perlin</td>
+	<td>Minecraft terrain</td>
+	<td>rolling hills out of math</td>
+</tr>
+<tr>
+	<td>RNG</td>
+	<td>Diablo</td>
+	<td>chance as drama</td>
+</tr>
+<tr>
+	<td>Training</td>
+	<td>mixed styles</td>
+	<td>mash-ups that feel new</td>
+</tr>
+<tr>
+	<td>Prompts</td>
+	<td>player wording</td>
+	<td>ambiguity as fuel</td>
+</tr>
+</tbody>
+</table></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings light v-split-container responsive present has-light-background fitted" data-background-color="#e9cdd7" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.906rem;">
+        <div style=""><h4 class="kicker" id="1:tutorialisland">1: Tutorial Island</h4><h3 id="genaijeopardy">GenAI Jeopardy</h3>
+
+<p>For each clue, you will understand two things:</p>
+
+<ol>
+<li>What is the system's input data?</li>
+<li>What does SGD learn to do?</li>
+</ol>
+
+<h4 id="goal:namethegenaisystembyansweringintheformofaquestion">Goal: Name the genAI system (by answering in the form of a question)</h4></div>
+        <figure style=""><img src="images/SGD%20in%20Games.png" class=" size-contain position-center-center"></figure>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings light title-container responsive present has-light-background fitted" data-background-color="#edd5da" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-title" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 class="kicker" id="2:assetwarppipe">2: Asset Warp Pipe</h4><h2 id="worldlevelandassetgeneration">World, Level, and Asset Generation</h2></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings light title-container responsive present has-light-background fitted" data-background-color="#f1dedd" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-title" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 class="kicker" id="2:assetwarppipe">2: Asset Warp Pipe</h4><h2 id="edify3d">Edify 3D</h2></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings light full-image-container responsive present has-light-background fitted" data-background-color="#f4e2dd" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-full-image media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><div class="single-image-wrapper"><video data-autoplay="" controls="" class=" size-contain image-opacity-80 position-center-center" data-paused-by-reveal=""><source src="images/goldrush.mp4"></video></div></div>
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings light full-image-container responsive present has-light-background fitted" data-background-color="#f8e6de" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-full-image media-grid" style="width: 100%; font-size: 1rem;">
+        <figure style=""><img src="images/Screenshot%202025-04-24%20at%2011.38.23%E2%80%AFPM.png" class=" size-contain position-center-center"></figure>
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings light title-container responsive present has-light-background fitted" data-background-color="#f6e7e1" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-title" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 class="kicker" id="2:assetwarppipe">2: Asset Warp Pipe</h4><h2 id="oasis">Oasis</h2></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings light title-container responsive present has-light-background fitted" data-background-color="#f5e8e5" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-title" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 class="kicker" id="2:assetwarppipe">2: Asset Warp Pipe</h4><h2 id="oasis">Oasis</h2>
+
+<h4 id="https:oasis.decart.ai"><a href="https://oasis.decart.ai/">https://oasis.decart.ai/</a></h4></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings light title-container responsive present has-light-background fitted" data-background-color="#f3e8df" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-title" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 class="kicker" id="3:narrativeinstances">3: Narrative Instances</h4><h2 id="protostoryasprompt">Protostory as Prompt</h2></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings light v-split-container responsive present has-light-background fitted" data-background-color="#f2e9da" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 class="kicker" id="3:narrativeinstances">3: Narrative Instances</h4><h2 id="protostoryasprompt">Protostory as Prompt</h2></div>
+        <figure style=""><img src="images/cinematic-prompt.png" class=" size-contain position-center-center"></figure>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings light title-container responsive present has-light-background fitted" data-background-color="#f1ecd9" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-title" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 class="kicker" id="3:narrativeinstances">3: Narrative Instances</h4><h2 id="covertprotocol">Covert Protocol</h2></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings light full-image-container responsive present has-light-background fitted" data-background-color="#f1f0d8" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-full-image media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><div class="single-image-wrapper"><video data-autoplay="" controls="" class=" image-opacity-80 position-center-center" data-paused-by-reveal=""><source src="images/inworld-nvidia-ace.mp4"></video></div></div>
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings light default-container responsive present has-light-background fitted" data-background-color="#ebf0de" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-default media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 class="kicker" id="3:narrativeinstances">3: Narrative Instances</h4><h3 id="challenges">Challenges</h3>
+<div class="single-image-wrapper"><figure><img src="images/witcher-3.png" class=" size-contain position-center-center"></figure></div></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings light title-container responsive present has-light-background fitted" data-background-color="#e6f1e5" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-title" style="width: 100%; font-size: 1rem;">
+        <div style=""><h2 id="finalboss">Final Boss</h2></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings light full-image-container responsive present has-light-background fitted" data-background-color="#e3efe8" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-full-image media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><div class="single-image-wrapper"><video data-autoplay="" controls="" class=" position-center-center" data-paused-by-reveal=""><source src="images/QT clip 2.mp4"></video></div></div>
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings light v-split-container responsive present has-light-background fitted" data-background-color="#e2edeb" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.859rem;">
+        <div style=""><h1 id="thesignalinthenoise">The Signal in the Noise</h1>
+
+<h2 id="aigamesandtheartofdenoising">AI, Games, and the Art of Denoising</h2>
+
+<p>Dylan Goldblatt, Ph.D.</p>
+
+<p>Kennesaw State University</p></div>
+        <figure style=""><img src="images/denoising.png" class=" position-center-center"></figure>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section></div>
+</div>
+<script src="engine/index.js"></script>
+<script src="engine/pptxgen.min.js"></script>
+<script src="engine/pfill.js"></script>
+<script src="engine/published.js"></script>
+<script>
+Reveal.configure({
+progress:true,
+progress:true,
+dependencies: [
+  {
+    src: "engine/highlight.js",
+    sync: true,
+    callback: function () {
+      hljs.initHighlightingOnLoad();
+    },
+  },
+],
+});
+</script>
+</body>
+</html>
